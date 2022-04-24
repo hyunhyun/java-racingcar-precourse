@@ -16,7 +16,6 @@ public class PlayGame {
 
     public void playTurn(Cars cars) {
         for (int i = 0; i < tryNumber.tryCount; i++) {
-
             cars.moveCars();
             cars.printCarsStatus();
         }
@@ -29,11 +28,11 @@ public class PlayGame {
     }
 
     private void getCarInput() {
-        boolean carNameCheck = false;
-        while (!carNameCheck) {
+        boolean carNameCheckBoolean = false;
+        while (!carNameCheckBoolean) {
             System.out.println(INPUT_MSG_CARNAME);
             String carNamesString = Console.readLine();
-            carNameCheck = carNameCheck(carNamesString);
+            carNameCheckBoolean = carNameCheck(carNamesString);
         }
     }
 
